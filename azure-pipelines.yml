@@ -1,0 +1,23 @@
+trigger:
+  - main  # Thhis can be repplaced with the branch name if needed
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '20.x'
+    displayName: 'Install Node.js'
+
+  - script: |
+      npm install
+      npx cypress run
+    displayName: 'Install dependencies and run Cypress tests'
+
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFiles: '**/cypress/reports/*.json'
+      testRunner: 'Other'  # Use "JUnit" if using JUnit-compatible output
+    condition: succeededOrFailed()
+    displayName: 'Publish Test Results'
