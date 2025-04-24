@@ -35,7 +35,7 @@ jobs:
       # Upload Cypress artifacts (videos/screenshots)
       - name: Upload Cypress artifacts
         if: always()  # You can change this to `if: failure()` if you only want to upload on failure
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: cypress-artifacts
           path: |
