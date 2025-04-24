@@ -1,20 +1,20 @@
 {
   "stats": {
-    "suites": 5,
-    "tests": 5,
-    "passes": 4,
+    "suites": 11,
+    "tests": 11,
+    "passes": 8,
     "pending": 0,
-    "failures": 1,
-    "testsRegistered": 5,
-    "passPercent": 80,
+    "failures": 3,
+    "testsRegistered": 11,
+    "passPercent": 72.72727272727273,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
     "start": "2025-04-24T01:56:28.590Z",
-    "end": "2025-04-24T02:08:43.320Z",
-    "duration": 734730
+    "end": "2025-04-24T05:32:35.113Z",
+    "duration": 12966523
   },
   "results": [
     {
@@ -297,6 +297,362 @@
           "pending": [],
           "skipped": [],
           "duration": 983,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "d6fad02a-05b2-4b97-88cb-a4e246950ff6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\commands-dropdown.cy.js",
+      "file": "cypress\\e2e\\commands-dropdown.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "81455e43-23a8-41c8-a170-7d00f0dfbeb0",
+          "title": "Cypress.io Navigation Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should open Commands dropdown and select Files",
+              "fullTitle": "Cypress.io Navigation Test should open Commands dropdown and select Files",
+              "timedOut": null,
+              "duration": 8886,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.cypress.io'); // ✅ Cypress main site\n// Wait for menu to load and click \"Docs\"\ncy.contains('Docs').click();\n// Click the dropdown menu for \"API\"\ncy.contains('API').click();\n// Now click \"Files\" inside API section\ncy.contains('Files').click();\n// Assert the URL contains 'files'\ncy.url().should('include', 'files');",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<a id=\"dropdownDocs\" aria-expanded=\"false\" data-cy=\"dropdown-docs\" href=\"https://on.cypress.io/\" target=\"_blank\" class=\"nav-bar-link menu:nav-bar-link-hover z-10 !flex w-full cursor-pointer items-center justify-between py-[8px] menu:w-auto menu:py-0\">...</a>`\n\nis being covered by another element:\n\n`<span id=\"fab830bb-687c-4e8c-a59e-10b5a2143a55__label\" class=\" osano-cm-content__message osano-cm-message \">This we...</span>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<a id=\"dropdownDocs\" aria-expanded=\"false\" data-cy=\"dropdown-docs\" href=\"https://on.cypress.io/\" target=\"_blank\" class=\"nav-bar-link menu:nav-bar-link-hover z-10 !flex w-full cursor-pointer items-center justify-between py-[8px] menu:w-auto menu:py-0\">...</a>`\n\nis being covered by another element:\n\n`<span id=\"fab830bb-687c-4e8c-a59e-10b5a2143a55__label\" class=\" osano-cm-content__message osano-cm-message \">This we...</span>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at ensureIsDescendent (https://www.cypress.io/__cypress/runner/cypress_runner.js:111849:68)\n    at ensureDescendents (https://www.cypress.io/__cypress/runner/cypress_runner.js:111900:5)\n    at ensureDescendentsAndScroll (https://www.cypress.io/__cypress/runner/cypress_runner.js:111906:14)\n    at ensureElIsNotCovered (https://www.cypress.io/__cypress/runner/cypress_runner.js:112037:5)\n    at runAllChecks (https://www.cypress.io/__cypress/runner/cypress_runner.js:112217:52)\n    at retryActionability (https://www.cypress.io/__cypress/runner/cypress_runner.js:112254:16)\n    at tryCatcher (https://www.cypress.io/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise.attempt.Promise.try (https://www.cypress.io/__cypress/runner/cypress_runner.js:4315:29)\n    at whenStable (https://www.cypress.io/__cypress/runner/cypress_runner.js:143192:68)\n    at <unknown> (https://www.cypress.io/__cypress/runner/cypress_runner.js:143133:14)\n    at tryCatcher (https://www.cypress.io/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://www.cypress.io/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://www.cypress.io/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://www.cypress.io/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://www.cypress.io/__cypress/runner/cypress_runner.js:1701:18)\n    at Promise._fulfill (https://www.cypress.io/__cypress/runner/cypress_runner.js:1645:18)\n    at <unknown> (https://www.cypress.io/__cypress/runner/cypress_runner.js:5450:46)\nFrom Your Spec Code:\n    at Context.eval (webpack://cypress-test-project/./cypress/e2e/commands-dropdown.cy.js:6:26)",
+                "diff": null
+              },
+              "uuid": "0ae01e81-f0d8-4e4c-b56f-d616b2a28047",
+              "parentUUID": "81455e43-23a8-41c8-a170-7d00f0dfbeb0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "0ae01e81-f0d8-4e4c-b56f-d616b2a28047"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 8886,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "e7122be1-3304-4587-972d-db2ac4c613d7",
+      "title": "",
+      "fullFile": "cypress\\e2e\\simple-test.cy.js",
+      "file": "cypress\\e2e\\simple-test.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6a7d6e8a-d6b9-446d-8912-4650864c0692",
+          "title": "Clippy.io Homepage Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should load the homepage and check title & content",
+              "fullTitle": "Clippy.io Homepage Test should load the homepage and check title & content",
+              "timedOut": null,
+              "duration": 47075,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// 1. Visit Clippy.io\ncy.visit('https://www.clippy.io');\n// 2. Assert the page title contains 'Clippy'\ncy.title().should('include', 'Clippy');\n// 3. Check if \"Clippy\" or a main heading is visible\ncy.contains('Clippy').should('be.visible'); // Or use another visible element like h1",
+              "err": {},
+              "uuid": "6afdadeb-7cac-4c61-8e38-3c3df7bd6889",
+              "parentUUID": "6a7d6e8a-d6b9-446d-8912-4650864c0692",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6afdadeb-7cac-4c61-8e38-3c3df7bd6889"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 47075,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "4e98e8b6-e1d7-4951-a1ea-6659927334af",
+      "title": "",
+      "fullFile": "cypress\\e2e\\spec.cy.js",
+      "file": "cypress\\e2e\\spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ccad25c4-5285-4f61-8b60-323525b68b2a",
+          "title": "template spec",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "passes",
+              "fullTitle": "template spec passes",
+              "timedOut": null,
+              "duration": 884,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://example.cypress.io');",
+              "err": {},
+              "uuid": "1d902ffa-2e0f-4a62-aa6a-fb834db5f13f",
+              "parentUUID": "ccad25c4-5285-4f61-8b60-323525b68b2a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1d902ffa-2e0f-4a62-aa6a-fb834db5f13f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 884,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "90909464-07ba-49ff-b8f0-160923413d44",
+      "title": "",
+      "fullFile": "cypress\\e2e\\commands-dropdown.cy.js",
+      "file": "cypress\\e2e\\commands-dropdown.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "eb4ce67f-d321-4a8d-9063-f212180046be",
+          "title": "Cypress.io Navigation Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should open Commands dropdown and select Files",
+              "fullTitle": "Cypress.io Navigation Test should open Commands dropdown and select Files",
+              "timedOut": null,
+              "duration": 7339,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.cypress.io'); // ✅ Cypress main site\n// Wait for menu to load and click \"Docs\"\ncy.contains('Docs').click();\n// Click the dropdown menu for \"API\"\ncy.contains('API').click();\n// Now click \"Files\" inside API section\ncy.contains('Files').click();\n// Assert the URL contains 'files'\ncy.url().should('include', 'files');",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<a id=\"dropdownDocs\" aria-expanded=\"false\" data-cy=\"dropdown-docs\" href=\"https://on.cypress.io/\" target=\"_blank\" class=\"nav-bar-link menu:nav-bar-link-hover z-10 !flex w-full cursor-pointer items-center justify-between py-[8px] menu:w-auto menu:py-0\">...</a>`\n\nis being covered by another element:\n\n`<span id=\"2dca5aa2-31e6-437c-93a6-fa456c055471__label\" class=\" osano-cm-content__message osano-cm-message \">This we...</span>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<a id=\"dropdownDocs\" aria-expanded=\"false\" data-cy=\"dropdown-docs\" href=\"https://on.cypress.io/\" target=\"_blank\" class=\"nav-bar-link menu:nav-bar-link-hover z-10 !flex w-full cursor-pointer items-center justify-between py-[8px] menu:w-auto menu:py-0\">...</a>`\n\nis being covered by another element:\n\n`<span id=\"2dca5aa2-31e6-437c-93a6-fa456c055471__label\" class=\" osano-cm-content__message osano-cm-message \">This we...</span>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at ensureIsDescendent (https://www.cypress.io/__cypress/runner/cypress_runner.js:113057:68)\n    at ensureDescendents (https://www.cypress.io/__cypress/runner/cypress_runner.js:113108:5)\n    at ensureDescendentsAndScroll (https://www.cypress.io/__cypress/runner/cypress_runner.js:113114:14)\n    at ensureElIsNotCovered (https://www.cypress.io/__cypress/runner/cypress_runner.js:113245:5)\n    at runAllChecks (https://www.cypress.io/__cypress/runner/cypress_runner.js:113444:52)\n    at retryActionability (https://www.cypress.io/__cypress/runner/cypress_runner.js:113481:16)\n    at tryCatcher (https://www.cypress.io/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://www.cypress.io/__cypress/runner/cypress_runner.js:4285:29)\n    at whenStable (https://www.cypress.io/__cypress/runner/cypress_runner.js:145828:68)\n    at <unknown> (https://www.cypress.io/__cypress/runner/cypress_runner.js:145769:14)\n    at tryCatcher (https://www.cypress.io/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://www.cypress.io/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://www.cypress.io/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://www.cypress.io/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://www.cypress.io/__cypress/runner/cypress_runner.js:1671:18)\n    at Promise._fulfill (https://www.cypress.io/__cypress/runner/cypress_runner.js:1615:18)\n    at <unknown> (https://www.cypress.io/__cypress/runner/cypress_runner.js:5420:46)\nFrom Your Spec Code:\n    at Context.eval (webpack://cypress-test-project/./cypress/e2e/commands-dropdown.cy.js:6:26)",
+                "diff": null
+              },
+              "uuid": "59a9de92-2e17-45bc-a8ce-c413fae1db63",
+              "parentUUID": "eb4ce67f-d321-4a8d-9063-f212180046be",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "59a9de92-2e17-45bc-a8ce-c413fae1db63"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 7339,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ca351bb4-8af2-4c2f-8645-3aa1f530d071",
+      "title": "",
+      "fullFile": "cypress\\e2e\\simple-test.cy.js",
+      "file": "cypress\\e2e\\simple-test.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fee171aa-3d60-482e-a494-62c843dd6948",
+          "title": "Clippy.io Homepage Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should load the homepage and check title & content",
+              "fullTitle": "Clippy.io Homepage Test should load the homepage and check title & content",
+              "timedOut": null,
+              "duration": 44875,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// 1. Visit Clippy.io\ncy.visit('https://www.clippy.io');\n// 2. Assert the page title contains 'Clippy'\ncy.title().should('include', 'Clippy');\n// 3. Check if \"Clippy\" or a main heading is visible\ncy.contains('Clippy').should('be.visible'); // Or use another visible element like h1",
+              "err": {},
+              "uuid": "a7c1e674-e15b-418f-a18c-7a23c2d52ccf",
+              "parentUUID": "fee171aa-3d60-482e-a494-62c843dd6948",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a7c1e674-e15b-418f-a18c-7a23c2d52ccf"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 44875,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "aa47b2ab-2ee1-4283-90c2-16a641451f85",
+      "title": "",
+      "fullFile": "cypress\\e2e\\spec.cy.js",
+      "file": "cypress\\e2e\\spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f9991229-eeba-45df-a579-2351a3738800",
+          "title": "template spec",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "passes",
+              "fullTitle": "template spec passes",
+              "timedOut": null,
+              "duration": 484,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://example.cypress.io');",
+              "err": {},
+              "uuid": "2cf5dccf-f0be-4a7e-95fa-fcb829d74304",
+              "parentUUID": "f9991229-eeba-45df-a579-2351a3738800",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2cf5dccf-f0be-4a7e-95fa-fcb829d74304"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 484,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
