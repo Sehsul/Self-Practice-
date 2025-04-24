@@ -16,7 +16,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Set up Node.js (make sure to use the correct version)
+      # Set up Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
@@ -32,12 +32,12 @@ jobs:
         run: |
           npx cypress run
 
-      # Upload Cypress screenshots and videos if there are failures
+      # Upload Cypress artifacts (videos/screenshots)
       - name: Upload Cypress artifacts
-        if: always()
+        if: always()  # You can change this to `if: failure()` if you only want to upload on failure
         uses: actions/upload-artifact@v2
         with:
           name: cypress-artifacts
           path: |
-            cypress/screenshots/**/*
-            cypress/videos/**/*   # Adjust this if video is not enabled or not generated
+            cypress/videos
+            cypress/screenshots
