@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-04-24T02:07:36.316Z",
+    "end": "2025-04-24T02:07:47.035Z",
+    "duration": 10719,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "11185e9c-9e5a-4ddc-95a7-b30fb042c42e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\commands-dropdown.cy.js",
+      "file": "cypress\\e2e\\commands-dropdown.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8379d731-be7a-4822-ba9c-ba31bc0941ba",
+          "title": "Cypress.io Navigation Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should open Commands dropdown and select Files",
+              "fullTitle": "Cypress.io Navigation Test should open Commands dropdown and select Files",
+              "timedOut": null,
+              "duration": 7788,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.cypress.io'); // ✅ Cypress main site\n// Wait for menu to load and click \"Docs\"\ncy.contains('Docs').click();\n// Click the dropdown menu for \"API\"\ncy.contains('API').click();\n// Now click \"Files\" inside API section\ncy.contains('Files').click();\n// Assert the URL contains 'files'\ncy.url().should('include', 'files');",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<a id=\"dropdownDocs\" aria-expanded=\"false\" data-cy=\"dropdown-docs\" href=\"https://on.cypress.io/\" target=\"_blank\" class=\"nav-bar-link menu:nav-bar-link-hover z-10 !flex w-full cursor-pointer items-center justify-between py-[8px] menu:w-auto menu:py-0\">...</a>`\n\nis being covered by another element:\n\n`<span id=\"fd17dd29-4c5d-453f-bf14-716d5e6cbe1b__label\" class=\" osano-cm-content__message osano-cm-message \">This we...</span>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<a id=\"dropdownDocs\" aria-expanded=\"false\" data-cy=\"dropdown-docs\" href=\"https://on.cypress.io/\" target=\"_blank\" class=\"nav-bar-link menu:nav-bar-link-hover z-10 !flex w-full cursor-pointer items-center justify-between py-[8px] menu:w-auto menu:py-0\">...</a>`\n\nis being covered by another element:\n\n`<span id=\"fd17dd29-4c5d-453f-bf14-716d5e6cbe1b__label\" class=\" osano-cm-content__message osano-cm-message \">This we...</span>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at ensureIsDescendent (https://www.cypress.io/__cypress/runner/cypress_runner.js:113057:68)\n    at ensureDescendents (https://www.cypress.io/__cypress/runner/cypress_runner.js:113108:5)\n    at ensureDescendentsAndScroll (https://www.cypress.io/__cypress/runner/cypress_runner.js:113114:14)\n    at ensureElIsNotCovered (https://www.cypress.io/__cypress/runner/cypress_runner.js:113245:5)\n    at runAllChecks (https://www.cypress.io/__cypress/runner/cypress_runner.js:113444:52)\n    at retryActionability (https://www.cypress.io/__cypress/runner/cypress_runner.js:113481:16)\n    at tryCatcher (https://www.cypress.io/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://www.cypress.io/__cypress/runner/cypress_runner.js:4285:29)\n    at whenStable (https://www.cypress.io/__cypress/runner/cypress_runner.js:145828:68)\n    at <unknown> (https://www.cypress.io/__cypress/runner/cypress_runner.js:145769:14)\n    at tryCatcher (https://www.cypress.io/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://www.cypress.io/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://www.cypress.io/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://www.cypress.io/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://www.cypress.io/__cypress/runner/cypress_runner.js:1671:18)\n    at Promise._fulfill (https://www.cypress.io/__cypress/runner/cypress_runner.js:1615:18)\n    at <unknown> (https://www.cypress.io/__cypress/runner/cypress_runner.js:5420:46)\nFrom Your Spec Code:\n    at Context.eval (webpack://cypress-test-project/./cypress/e2e/commands-dropdown.cy.js:6:26)",
+                "diff": null
+              },
+              "uuid": "ac0151ae-6581-4b8c-a37d-64bb85e73ba7",
+              "parentUUID": "8379d731-be7a-4822-ba9c-ba31bc0941ba",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ac0151ae-6581-4b8c-a37d-64bb85e73ba7"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 7788,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
