@@ -4,3 +4,4 @@ Feature: Clippy.io Homepage Test
     Given I visit the Clippy.io homepage
     Then the page title should include "Clippy"
     And the main heading "Clippy" should be visible
+    And I click on "Try Clippy for free" button

@@ -9,7 +9,7 @@ module.exports = defineConfig({
   reporterOptions: {
     reportDir: "cypress/reports",
     overwrite: false,
-    html: false,
+    html: true, // Optional: toggle if you want a visual report
     json: true,
   },
   projectId: '9i5z95',
@@ -19,10 +19,17 @@ module.exports = defineConfig({
     supportFile: "cypress/support/index.js",
     fixturesFolder: "cypress/fixtures",
     baseUrl: 'https://www.clippy.io',
+    screenshotOnRunFailure: true,
+    videosFolder: 'cypress/videos',
+    screenshotsFolder: 'cypress/screenshots',
+    retries: {
+      runMode: 2,
+      openMode: 0,
+    },
     async setupNodeEvents(on, config) {
       await addCucumberPreprocessorPlugin(on, {
         ...config,
-        stepDefinitions: path.join(__dirname, "cypress/support/step_definitions") // ✅ Correct location
+        stepDefinitions: path.join(__dirname, "cypress/support/step_definitions")
       });
 
       on(

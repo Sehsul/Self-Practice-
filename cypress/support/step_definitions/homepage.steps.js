@@ -1,5 +1,11 @@
 // cypress/support/step_definitions/homepage.steps.js
-import { Given, Then } from '@badeball/cypress-cucumber-preprocessor';
+import {
+  Given,
+  When,
+  Then,
+  And,
+  defineStep,
+} from "@badeball/cypress-cucumber-preprocessor";
 
 
 //const { expect } = require('chai');
@@ -14,4 +20,8 @@ Then('the page title should include {string}', function (title) {
 
 Then('the main heading {string} should be visible', function (heading) {
   cy.contains(heading).should('be.visible');
+});
+
+defineStep('I click on {string} button', (buttonText) => {
+  cy.contains('button', buttonText).click();
 });
