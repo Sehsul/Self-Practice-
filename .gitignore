@@ -1,4 +1,15 @@
+# Ignore .qodo file
 .qodo
+
+# Ignore node_modules directory
 node_modules
+
+# Ignore Cypress screenshots and videos
 cypress/screenshots/
-cypress/videos
+cypress/videos/
+
+# Ignore .vscode directory
+.vscode/
+
+# Ignore .github directory
+.github/
